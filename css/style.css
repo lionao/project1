@@ -1,0 +1,236 @@
+body, h1,h2,h3,h4,h5,h6,p,ul,li,dl,dt,dd {
+	margin: 0;
+	padding: 0;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;	
+}
+a {
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+
+/* common css*/
+.clearfix::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.button {
+	display: inline-block;
+	font-size: 40px;
+	color: #fff;
+	background-color: #ce9750;
+	padding: 5px 10px;
+	border-radius: 5px; 
+}
+.button:hover{
+	opacity: .8;
+}
+html,body{
+	height: 100%;
+}
+header{
+	position: relative;
+	height: 100%;
+	min-height: 600px;
+	background: #000 url(../img/bgpic.jpg);
+	background-size: cover;  	/*cover意为将图片遮住背景色*/
+}
+header::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;/*可以设置宽高百分百*/
+	background: #000;
+	opacity: .3;
+}
+.layout{
+	width: 1000px;
+	margin: 0 auto;
+}
+.logo{
+	color: #9ac9e3;
+	font-size: 32px;
+	float: left;
+	margin-top: 20px;
+}
+
+header .nav{
+	float: right;
+}
+header .nav > li {
+	margin:20px 0;
+	float: left;
+
+}
+header .nav a {
+	display: block;
+	padding: 10px;
+	border-radius: 5px;
+	color: #ce9750;
+	font-size: 16px;
+}
+header .nav a:hover{
+	background: #ddcc6f;
+}
+
+header .intruction {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	text-align: center;
+}
+header .intruction h1{
+	font-size: 32px;
+}
+header .intruction h2{
+	font-size: 42px;
+	margin-top: 20px;
+}
+header .intruction .button{
+	margin-top: 20px;
+}
+/*header结束*/
+
+section {
+	margin-top: 50px;
+	text-align: center;
+}
+section h1{
+	font-size: 40px;
+	margin:20px;
+}
+section h3{
+	font-size: 20px;
+	margin:20px;
+}
+section p {
+	font-size: 20px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+section .services > li{
+	float: left;
+	width: 33.33%;
+	padding: 10px 20px;
+}
+section > ul .iconfont {
+	font-size: 60px;
+}
+section .iconfont {
+	background-color: #c0f4f9;
+	border-radius: 60px;
+}
+section .portfolio figure{
+	width: calc(33.33% - 20px);
+	height: 240px;
+	margin: 10px;
+	float: left;
+}
+section .portfolio a {
+	display: block;
+	height: 180px;
+}
+section .portfolio img {
+	width: 100%;
+	height:100%;
+}
+section .portfolio figcaption {
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+section .portfolio p {
+	color: #666;
+	margin-top: 10px;
+}
+section .portfolio {
+	position: relative;
+}
+
+/*timeline*/
+section .timeline img{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border:8px solid lightblue;
+}
+section .timeline > li::after {
+	content: '' ;
+	display: block;
+	clear: both;
+}
+section .timeline > li {
+	position: relative;
+	margin-top: 30px;
+}
+section .timeline > li:nth-child(odd) {
+	padding-right: calc(50% - 75px) ;
+	text-align: right;
+}
+section .timeline > li:nth-child(odd) img{
+	float: right;
+}
+section .timeline >li:nth-child(odd) dl{
+	margin-right: 180px;
+}
+section .timeline > li:nth-child(even) {
+	padding-left: calc(50% - 75px) ;
+	text-align: left;
+}
+section .timeline  > li:nth-child(even) dl{
+	margin-left: 180px;
+}
+section .timeline > li:nth-child(even) img{
+	float: left;
+}
+section .timeline dt{
+	font-size: 20px;
+	font-weight: bold;
+}
+section .timeline dd:nth-child(2){
+	font-style: italic;
+	font-size: 15px;
+	font-weight: bold;
+}
+section .timeline > li::before {
+	position: absolute;
+	content: '';
+	left:50%;
+	margin-left: 0px;
+	margin-top: 150px;
+	display: inline-block;
+	height: 36px;
+	width: 3px;
+	background-color: lightblue;
+}
+section .timeline .img{
+	display: inline-block;
+	vertical-align: middle;
+	padding-top: 50px;
+	font-size: 18px;
+	font-weight: bold;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border:8px solid lightblue;
+}
+section .timeline > li:last-child::before {
+	height: 0;
+}
+/*TEAM*/
+.member img {
+    margin: 0 auto;
+    border: 7px solid #fff;
+    border-radius: 50%;
+}
